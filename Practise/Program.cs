@@ -4,25 +4,42 @@ class Base
     {
         static void Main()
         {
-          
-        List<Person> people = new(3);
-        
-        for(int i=0;i<3;i++)
+            Two dve = new();
+            Three tri = new();
+          One[] numbers = [
+            dve,tri];
+            foreach( One number in numbers)
             {
-            Person temp = new();
-            temp.Name=System.Console.ReadLine();
-            people.Add(temp);
+                number.Hy();
             }
-            foreach(var person in people)
-            {
-            System.Console.WriteLine(person.Name);
-            }
+
+            
 
 
         }
     }
-     public class Person
+ 
+ public abstract class One
     {
-    public string? Name {get;set;}
+    public virtual void Hy()
+        {
+        System.Console.WriteLine("Hello One");
+        }
     }
+    public class Two:One
+    {
+        public override void Hy()
+        {
+           System.Console.WriteLine("Hello Two");
+        }
+    }
+    public class Three:Two
+    {
+        public sealed override void Hy()
+        {
+            System.Console.WriteLine("Hello Three");
+        }
+    }
+   
+ 
 }

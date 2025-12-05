@@ -14,7 +14,13 @@
             System.Console.WriteLine($"The name is {Bary.Name} and is {Bary.Age} years old it's tail is {Bary.Tail}.");
             Bary.MakeSound();
             Bary.Love();
-          
+            
+            Pet[] All = [Bary,Doris];
+            foreach(Pet animal in All)
+            {
+            System.Console.WriteLine(animal.Name);
+            }
+
 
         }
 
