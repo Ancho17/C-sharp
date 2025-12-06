@@ -1,45 +1,59 @@
-﻿namespace Practise
+﻿
+
+using System.Collections.ObjectModel;
+
+namespace Practise
 {
 class Base
     {
         static void Main()
         {
-            Two dve = new();
-            Three tri = new();
-          One[] numbers = [
-            dve,tri];
-            foreach( One number in numbers)
+            List<uint> colection = [];
+        Fibonachi count = new(1,2);
+        count.Calc(colection);
+       IEnumerable<uint> order =
+       from colect in colection
+       where colect % 2==0
+       orderby colect descending
+       select colect;
+       foreach(var colect in order)
             {
-                number.Hy();
+                System.Console.Write("{0},",colect);
             }
+            System.Console.WriteLine(" ");
 
-            
+        
 
+           
 
         }
     }
- 
- public abstract class One
+ public class Fibonachi
     {
-    public virtual void Hy()
+        public uint a{get;set;}
+        public uint b{get;set;}
+        
+        public Fibonachi(uint a,uint b)
         {
-        System.Console.WriteLine("Hello One");
+        this.a = a;
+        this.b = b;
+        }
+
+        public List<uint> Calc( List<uint> colection)
+        {
+          uint temp=0;
+         colection.Add(a);
+         colection.Add(b);
+          for(int i=0;i<30;i++)
+            {
+            temp =b;
+            b=a+temp;
+            a= temp;
+            colection.Add(b);
+            } 
+           return colection; 
         }
     }
-    public class Two:One
-    {
-        public override void Hy()
-        {
-           System.Console.WriteLine("Hello Two");
-        }
-    }
-    public class Three:Two
-    {
-        public sealed override void Hy()
-        {
-            System.Console.WriteLine("Hello Three");
-        }
-    }
-   
+
  
 }
