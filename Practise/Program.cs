@@ -1,59 +1,77 @@
 ﻿
 
 using System.Collections.ObjectModel;
+using System.Globalization;
 
 namespace Practise
 {
 class Base
     {
-        static void Main()
+        static void Main(string[] argc)
         {
-            List<uint> colection = [];
-        Fibonachi count = new(1,2);
-        count.Calc(colection);
-       IEnumerable<uint> order =
-       from colect in colection
-       where colect % 2==0
-       orderby colect descending
-       select colect;
-       foreach(var colect in order)
-            {
-                System.Console.Write("{0},",colect);
+            try{
+           BankAcount Jhon = new()
+           {
+            Name = "Jhon",
+            Amount = 1000
+           };
+           Jhon.MoneyHandle(argc[0]);
             }
-            System.Console.WriteLine(" ");
-
+            catch(IndexOutOfRangeException)
+            {
+            System.Console.WriteLine("Please add wd for withdraw or d for deposit after dotnet run");
+            }
         
 
            
 
         }
+    
+
     }
- public class Fibonachi
+ public class BankAcount
     {
-        public uint a{get;set;}
-        public uint b{get;set;}
-        
-        public Fibonachi(uint a,uint b)
+    public string? Name{get;set;}
+    public int Amount{get;set;}
+    public void MoneyHandle(string arg)
         {
-        this.a = a;
-        this.b = b;
-        }
-
-        public List<uint> Calc( List<uint> colection)
-        {
-          uint temp=0;
-         colection.Add(a);
-         colection.Add(b);
-          for(int i=0;i<30;i++)
+            int get =0;
+            int put=0;
+            switch(arg){
+                case "wd":
+         try{
+            System.Console.Write("The amount you would like to withdraw: ");   
+         get= Int32.Parse(Console.ReadLine());
+         }
+         catch(FormatException)
             {
-            temp =b;
-            b=a+temp;
-            a= temp;
-            colection.Add(b);
-            } 
-           return colection; 
+            System.Console.WriteLine("Please input valid numeric characters");
+            }
+            catch(ArgumentOutOfRangeException ex)
+            {
+            System.Console.WriteLine(ex.Message);
+            }
+            if(get>Amount)
+            {
+            throw new ArgumentOutOfRangeException("Not enough money to withdraw");
+            }
+        Amount -= get;
+        break;
+        case "d":
+            
+            try{
+                System.Console.Write("The amount you would like to deposit: ");
+         put= Int32.Parse(Console.ReadLine());
+            }
+             catch(FormatException ex)
+            {
+            System.Console.WriteLine("Please input valid numeric characters");
+            }
+        Amount +=put;
+            break;
+        }
+        Console.WriteLine($"Current amount of money in {Name}'s bank account is {Amount} ");
         }
     }
-
  
 }
