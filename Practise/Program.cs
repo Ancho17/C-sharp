@@ -1,77 +1,65 @@
-﻿
-
-using System.Collections.ObjectModel;
-using System.Globalization;
+﻿using System.Threading.Tasks.Dataflow;
 
 namespace Practise
 {
 class Base
     {
-        static void Main(string[] argc)
+        static void Main()
         {
-            try{
-           BankAcount Jhon = new()
-           {
-            Name = "Jhon",
-            Amount = 1000
-           };
-           Jhon.MoneyHandle(argc[0]);
-            }
-            catch(IndexOutOfRangeException)
-            {
-            System.Console.WriteLine("Please add wd for withdraw or d for deposit after dotnet run");
-            }
-        
+            System.Console.Write("Symbol:");
+             string? symbol = System.Console.ReadLine();
+            System.Console.Write("Height and Width: ");
+            int height_width = Int32.Parse(System.Console.ReadLine());
+            
 
+             for(int j=0;j<height_width;j++)
+             {
+             for(int i =0; i<height_width;i++)
+            {
+               if(j<1||j>height_width-2){
+                
+            System.Console.Write(symbol);
+               }
+                    else
+                    {
+                        if(i>0&&i<height_width-1)
+                        {
+                            System.Console.Write(" ");
+                        }
+                        else
+                        {
+                            System.Console.Write(symbol);
+                            
+                        }
+                    }
+               
+            }
+            System.Console.WriteLine("");
+             }
+
+        
+     
+       
+        
+        
+        }
+  
            
 
-        }
+    }
+    
+    
+    
+   
     
 
-    }
- public class BankAcount
-    {
-    public string? Name{get;set;}
-    public int Amount{get;set;}
-    public void MoneyHandle(string arg)
-        {
-            int get =0;
-            int put=0;
-            switch(arg){
-                case "wd":
-         try{
-            System.Console.Write("The amount you would like to withdraw: ");   
-         get= Int32.Parse(Console.ReadLine());
-         }
-         catch(FormatException)
-            {
-            System.Console.WriteLine("Please input valid numeric characters");
-            }
-            catch(ArgumentOutOfRangeException ex)
-            {
-            System.Console.WriteLine(ex.Message);
-            }
-            if(get>Amount)
-            {
-            throw new ArgumentOutOfRangeException("Not enough money to withdraw");
-            }
-        Amount -= get;
-        break;
-        case "d":
-            
-            try{
-                System.Console.Write("The amount you would like to deposit: ");
-         put= Int32.Parse(Console.ReadLine());
-            }
-             catch(FormatException ex)
-            {
-            System.Console.WriteLine("Please input valid numeric characters");
-            }
-        Amount +=put;
-            break;
-        }
-        Console.WriteLine($"Current amount of money in {Name}'s bank account is {Amount} ");
-        }
-    }
- 
+  
+   
+    
+   
+    
+
 }
+ 
+ 
+
