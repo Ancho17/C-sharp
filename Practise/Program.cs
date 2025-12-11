@@ -8,24 +8,24 @@ class Base
         {
             System.Console.Write("Number ");
            int number = Int32.Parse(System.Console.ReadLine());
-           System.Console.Write("Times ");
-           int times = Int32.Parse(System.Console.ReadLine());
-           recursion(number,times,number);
-           
-        
+           System.Console.WriteLine(Fibonacci(number,0,1,0));
         }
-        static void recursion(int number,int times ,int based)
+     static int Fibonacci (int times,int a,int b,int result)
         {
             
-        if(times!=1)
+          int temp;
+          if(times!=1)
             {
-             
-              number *=based;
-                recursion(number, times-1, based);
+                result = a+b;
+            temp =b;
+            b=a+b;
+            a=temp;
+            result = Fibonacci(times-1,a,b,result);
+
             }
-            if(times==1){
-            System.Console.WriteLine(number);
-            }
+            
+            return result;
+            
         }
       
   
