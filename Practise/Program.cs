@@ -6,30 +6,33 @@ class Base
     {
         static void Main()
         {
+            System.Console.Write("Number ");
+           int number = Int32.Parse(System.Console.ReadLine());
+           System.Console.Write("Times ");
+           int times = Int32.Parse(System.Console.ReadLine());
+           recursion(number,times,number);
            
-            Dictionary<string,int> inventory = [];
-            inventory.Add("apple",3);
-            inventory.Add("orange",5);
-            inventory.Add("banana",2);
-            foreach(var item in inventory)
-            {
-            System.Console.WriteLine($"{item.Key}:{item.Value}");
-            }
-           
-         
-            
-            
-            
-            
-            
-           
-        
         
         }
+        static void recursion(int number,int times ,int based)
+        {
+            
+        if(times!=1)
+            {
+             
+              number *=based;
+                recursion(number, times-1, based);
+            }
+            if(times==1){
+            System.Console.WriteLine(number);
+            }
+        }
+      
   
            
 
     }
+   
     
      
     
