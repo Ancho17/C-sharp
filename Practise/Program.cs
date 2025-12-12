@@ -6,30 +6,33 @@ class Base
     {
         static void Main()
         {
-            System.Console.Write("Number ");
-           int number = Int32.Parse(System.Console.ReadLine());
-           System.Console.WriteLine(Fibonacci(number,0,1,0));
-        }
-     static int Fibonacci (int times,int a,int b,int result)
-        {
-            
-          int temp;
-          if(times!=1)
-            {
-                result = a+b;
-            temp =b;
-            b=a+b;
-            a=temp;
-            result = Fibonacci(times-1,a,b,result);
+        System.Console.Write("Word ");
+         string? word = Console.ReadLine();
+         System.Console.WriteLine(Palidrome(word,word.Length,0,false));
 
-            }
-            
-            return result;
-            
+         
+        
+
         }
-      
-  
-           
+         static bool Palidrome(string word,int lenght,int start,bool status)
+        {
+         if(start == lenght-1)
+            {
+                return status;
+            }
+            else
+            {
+                if(word[lenght-1]==word[start])
+                {
+                status = true;
+                }
+                else
+                {
+                return false;
+                }
+            return status =Palidrome(word,lenght-1,start+1,status);
+            }
+        }
 
     }
    
