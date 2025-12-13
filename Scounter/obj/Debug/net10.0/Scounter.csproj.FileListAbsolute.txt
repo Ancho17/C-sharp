@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.AssemblyInfo.cs
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.sourcelink.json
+/workspaces/C-sharp/Scounter/bin/Debug/net10.0/Scounter
+/workspaces/C-sharp/Scounter/bin/Debug/net10.0/Scounter.deps.json
+/workspaces/C-sharp/Scounter/bin/Debug/net10.0/Scounter.runtimeconfig.json
+/workspaces/C-sharp/Scounter/bin/Debug/net10.0/Scounter.dll
+/workspaces/C-sharp/Scounter/bin/Debug/net10.0/Scounter.pdb
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.dll
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/refint/Scounter.dll
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.pdb
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/Scounter.genruntimeconfig.cache
+/workspaces/C-sharp/Scounter/obj/Debug/net10.0/ref/Scounter.dll
