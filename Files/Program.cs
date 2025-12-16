@@ -7,24 +7,34 @@ class Learn_File
     {
     static void Main()
         {
-       StreamReader reader =new("/workspaces/C-sharp/Files/Hello.txt");
-       StringBuilder text = new();
-       string read = reader.ReadLine();
-       text.Append(read);
-       
-       for(int i=0;i<text.Length;i++)
-            {
-                int s = (int)text[i]+3;
-                char ch = Convert.ToChar(s);
-                
-                text.Replace(text[i],ch);
-            }
-       reader.Close();
-       StreamWriter writer = new("/workspaces/C-sharp/Files/Hello.txt");
-       writer.Write(text.ToString(),false);
-       writer.Close();
+            using FileStream fs = new("/workspaces/C-sharp/Files/DesHello.txt",FileMode.OpenOrCreate,FileAccess.Write,FileShare.None);
+            
+            var text = "Hello World";
+            byte[] buffer = Encoding.UTF8.GetBytes(text);
+             fs.Write(buffer,0,text.Length);
+
+            fs.Close();
+            using FileStream fd = new("/workspaces/C-sharp/Files/DesHello.txt",FileMode.Open,FileAccess.Read,FileShare.Read);
+            byte[] bucket = new byte[text.Length];
+            int count;
+
+             
+             while((count=fd.Read(bucket,0,text.Length))!=0){
+
+            System.Console.WriteLine(Encoding.UTF8.GetString(bucket,0,text.Length));
+             }
+            fd.Close();
+            
+
+
+
+
+
+
 
 
         }
+
+      
     }
 }
