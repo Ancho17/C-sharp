@@ -1,0 +1,15 @@
+/workspaces/C-sharp/File2/bin/Debug/net10.0/File2
+/workspaces/C-sharp/File2/bin/Debug/net10.0/File2.deps.json
+/workspaces/C-sharp/File2/bin/Debug/net10.0/File2.runtimeconfig.json
+/workspaces/C-sharp/File2/bin/Debug/net10.0/File2.dll
+/workspaces/C-sharp/File2/bin/Debug/net10.0/File2.pdb
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.AssemblyInfoInputs.cache
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.AssemblyInfo.cs
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.sourcelink.json
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.dll
+/workspaces/C-sharp/File2/obj/Debug/net10.0/refint/File2.dll
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.pdb
+/workspaces/C-sharp/File2/obj/Debug/net10.0/File2.genruntimeconfig.cache
+/workspaces/C-sharp/File2/obj/Debug/net10.0/ref/File2.dll
