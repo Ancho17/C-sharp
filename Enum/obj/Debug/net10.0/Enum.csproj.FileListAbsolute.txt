@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Enum/bin/Debug/net10.0/Enum
+/workspaces/C-sharp/Enum/bin/Debug/net10.0/Enum.deps.json
+/workspaces/C-sharp/Enum/bin/Debug/net10.0/Enum.runtimeconfig.json
+/workspaces/C-sharp/Enum/bin/Debug/net10.0/Enum.dll
+/workspaces/C-sharp/Enum/bin/Debug/net10.0/Enum.pdb
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.AssemblyInfo.cs
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.sourcelink.json
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.dll
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/refint/Enum.dll
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.pdb
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/Enum.genruntimeconfig.cache
+/workspaces/C-sharp/Enum/obj/Debug/net10.0/ref/Enum.dll
