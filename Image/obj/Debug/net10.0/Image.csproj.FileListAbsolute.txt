@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Image/bin/Debug/net10.0/Image
+/workspaces/C-sharp/Image/bin/Debug/net10.0/Image.deps.json
+/workspaces/C-sharp/Image/bin/Debug/net10.0/Image.runtimeconfig.json
+/workspaces/C-sharp/Image/bin/Debug/net10.0/Image.dll
+/workspaces/C-sharp/Image/bin/Debug/net10.0/Image.pdb
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.AssemblyInfo.cs
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.sourcelink.json
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.dll
+/workspaces/C-sharp/Image/obj/Debug/net10.0/refint/Image.dll
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.pdb
+/workspaces/C-sharp/Image/obj/Debug/net10.0/Image.genruntimeconfig.cache
+/workspaces/C-sharp/Image/obj/Debug/net10.0/ref/Image.dll
