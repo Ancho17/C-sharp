@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Music/bin/Debug/net10.0/Music
+/workspaces/C-sharp/Music/bin/Debug/net10.0/Music.deps.json
+/workspaces/C-sharp/Music/bin/Debug/net10.0/Music.runtimeconfig.json
+/workspaces/C-sharp/Music/bin/Debug/net10.0/Music.dll
+/workspaces/C-sharp/Music/bin/Debug/net10.0/Music.pdb
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.AssemblyInfo.cs
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.sourcelink.json
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.dll
+/workspaces/C-sharp/Music/obj/Debug/net10.0/refint/Music.dll
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.pdb
+/workspaces/C-sharp/Music/obj/Debug/net10.0/Music.genruntimeconfig.cache
+/workspaces/C-sharp/Music/obj/Debug/net10.0/ref/Music.dll
