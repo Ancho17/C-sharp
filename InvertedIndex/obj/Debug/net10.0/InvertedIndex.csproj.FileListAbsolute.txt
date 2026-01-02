@@ -1,0 +1,15 @@
+/workspaces/C-sharp/InvertedIndex/bin/Debug/net10.0/InvertedIndex
+/workspaces/C-sharp/InvertedIndex/bin/Debug/net10.0/InvertedIndex.deps.json
+/workspaces/C-sharp/InvertedIndex/bin/Debug/net10.0/InvertedIndex.runtimeconfig.json
+/workspaces/C-sharp/InvertedIndex/bin/Debug/net10.0/InvertedIndex.dll
+/workspaces/C-sharp/InvertedIndex/bin/Debug/net10.0/InvertedIndex.pdb
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.AssemblyInfoInputs.cache
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.AssemblyInfo.cs
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.sourcelink.json
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.dll
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/refint/InvertedIndex.dll
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.pdb
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/InvertedIndex.genruntimeconfig.cache
+/workspaces/C-sharp/InvertedIndex/obj/Debug/net10.0/ref/InvertedIndex.dll
