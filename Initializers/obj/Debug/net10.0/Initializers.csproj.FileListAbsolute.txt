@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Initializers/bin/Debug/net10.0/Initializers
+/workspaces/C-sharp/Initializers/bin/Debug/net10.0/Initializers.deps.json
+/workspaces/C-sharp/Initializers/bin/Debug/net10.0/Initializers.runtimeconfig.json
+/workspaces/C-sharp/Initializers/bin/Debug/net10.0/Initializers.dll
+/workspaces/C-sharp/Initializers/bin/Debug/net10.0/Initializers.pdb
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.AssemblyInfo.cs
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.sourcelink.json
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.dll
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/refint/Initializers.dll
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.pdb
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/Initializers.genruntimeconfig.cache
+/workspaces/C-sharp/Initializers/obj/Debug/net10.0/ref/Initializers.dll
