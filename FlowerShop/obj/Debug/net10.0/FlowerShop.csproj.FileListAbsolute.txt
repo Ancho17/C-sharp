@@ -1,0 +1,15 @@
+/workspaces/C-sharp/FlowerShop/bin/Debug/net10.0/FlowerShop
+/workspaces/C-sharp/FlowerShop/bin/Debug/net10.0/FlowerShop.deps.json
+/workspaces/C-sharp/FlowerShop/bin/Debug/net10.0/FlowerShop.runtimeconfig.json
+/workspaces/C-sharp/FlowerShop/bin/Debug/net10.0/FlowerShop.dll
+/workspaces/C-sharp/FlowerShop/bin/Debug/net10.0/FlowerShop.pdb
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.AssemblyInfoInputs.cache
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.AssemblyInfo.cs
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.sourcelink.json
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.dll
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/refint/FlowerShop.dll
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.pdb
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/FlowerShop.genruntimeconfig.cache
+/workspaces/C-sharp/FlowerShop/obj/Debug/net10.0/ref/FlowerShop.dll
