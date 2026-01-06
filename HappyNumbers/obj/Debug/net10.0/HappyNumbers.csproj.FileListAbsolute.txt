@@ -1,0 +1,15 @@
+/workspaces/C-sharp/HappyNumbers/bin/Debug/net10.0/HappyNumbers
+/workspaces/C-sharp/HappyNumbers/bin/Debug/net10.0/HappyNumbers.deps.json
+/workspaces/C-sharp/HappyNumbers/bin/Debug/net10.0/HappyNumbers.runtimeconfig.json
+/workspaces/C-sharp/HappyNumbers/bin/Debug/net10.0/HappyNumbers.dll
+/workspaces/C-sharp/HappyNumbers/bin/Debug/net10.0/HappyNumbers.pdb
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.AssemblyInfoInputs.cache
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.AssemblyInfo.cs
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.sourcelink.json
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.dll
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/refint/HappyNumbers.dll
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.pdb
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/HappyNumbers.genruntimeconfig.cache
+/workspaces/C-sharp/HappyNumbers/obj/Debug/net10.0/ref/HappyNumbers.dll

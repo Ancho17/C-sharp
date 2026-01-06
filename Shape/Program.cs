@@ -4,15 +4,17 @@ class MaMen
 {
     static void Main()
         {
-        Square square = new(9,2);
+        Square square = new(9,0);
         square.Area();
+        Diamond diamond = new(4,6);
+        diamond.Area();
         }
 abstract class ShapeShifter
         {
-        public int S{get;set;}
-        public int A{get;set;}
-        public int B{get;set;}
-        public ShapeShifter(int a,int b)
+        public double S{get;set;}
+        public double A{get;set;}
+        public double B{get;set;}
+        public ShapeShifter(double a,double b)
             {
             
             A=a;
@@ -25,17 +27,28 @@ abstract class ShapeShifter
         }
     class Square : ShapeShifter
         {
-        public Square(int a,int b):base(a,b)
+        public Square(double a,double b):base(a,b)
             {
             
             }
             public override void Area()
             {
                 S=A*A;
-                System.Console.WriteLine($"The are of a square is {S}");
+                System.Console.WriteLine($"The area of a square is {S}");
             }
 
         
-        }    
-}
+        }  
+    class Diamond : ShapeShifter
+        {
+        public Diamond(double a,double b):base(a,b){}
+            public override void Area()
+            {
+                S=(A*B)/2;
+                System.Console.WriteLine($"The area of diamond is {S}");
+            }
+
+        }  
+        
+    }
 }
