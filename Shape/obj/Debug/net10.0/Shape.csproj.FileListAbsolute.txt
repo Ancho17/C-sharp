@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Shape/bin/Debug/net10.0/Shape
+/workspaces/C-sharp/Shape/bin/Debug/net10.0/Shape.deps.json
+/workspaces/C-sharp/Shape/bin/Debug/net10.0/Shape.runtimeconfig.json
+/workspaces/C-sharp/Shape/bin/Debug/net10.0/Shape.dll
+/workspaces/C-sharp/Shape/bin/Debug/net10.0/Shape.pdb
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.AssemblyInfo.cs
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.sourcelink.json
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.dll
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/refint/Shape.dll
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.pdb
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/Shape.genruntimeconfig.cache
+/workspaces/C-sharp/Shape/obj/Debug/net10.0/ref/Shape.dll
