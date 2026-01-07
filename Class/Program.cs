@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            Cat Doris = new("Doris", 3);
+            Cat Doris = new("Doris", 3);//Hy
             System.Console.WriteLine($"The name is {Doris.Name} it is {Doris.Age} and it has {Doris.Lives} lives.");
             Doris.MakeSound();
             Doris.Love();
