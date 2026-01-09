@@ -6,18 +6,29 @@ class Realisation
     {
     static void Main()
         {
-        Numbers one = new(){first=12,second = 45,third = 89};
+        string path = "/workspaces/C-sharp/Serialization/Info.json";
+        Numbers one = new(){first=3,second=4,third=1};
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string info = JsonSerializer.Serialize(one,options);
+        File.WriteAllText(path,info);
+        string? info2 = File.ReadAllText(path);
+        Test? two =  JsonSerializer.Deserialize<Test>(info2);
+        System.Console.WriteLine(two.first);
+        System.Console.WriteLine(two.second);
+        System.Console.WriteLine(two.third);
         
-        string path ="/workspaces/C-sharp/Serialization/Info.json";
         
-       
-       var option = new JsonSerializerOptions{ WriteIndented = true};
-       byte[] serialize =JsonSerializer.SerializeToUtf8Bytes(one,option);
-       
-       File.WriteAllBytes(path,serialize);
-       System.Console.WriteLine(serialize);
+        
+  
         }
         public class Numbers
+        {
+        public int first{get;set;}
+        public int second{get;set;}
+        
+        public int third{get;set;}
+        }
+        public class Test
         {
         public int first{get;set;}
         public int second{get;set;}
