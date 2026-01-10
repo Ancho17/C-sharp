@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Questionnaire/bin/Debug/net10.0/Questionnaire
+/workspaces/C-sharp/Questionnaire/bin/Debug/net10.0/Questionnaire.deps.json
+/workspaces/C-sharp/Questionnaire/bin/Debug/net10.0/Questionnaire.runtimeconfig.json
+/workspaces/C-sharp/Questionnaire/bin/Debug/net10.0/Questionnaire.dll
+/workspaces/C-sharp/Questionnaire/bin/Debug/net10.0/Questionnaire.pdb
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.AssemblyInfo.cs
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.sourcelink.json
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.dll
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/refint/Questionnaire.dll
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.pdb
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/Questionnaire.genruntimeconfig.cache
+/workspaces/C-sharp/Questionnaire/obj/Debug/net10.0/ref/Questionnaire.dll
