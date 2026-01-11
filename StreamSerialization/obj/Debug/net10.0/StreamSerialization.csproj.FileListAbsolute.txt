@@ -1,0 +1,15 @@
+/workspaces/C-sharp/StreamSerialization/bin/Debug/net10.0/StreamSerialization
+/workspaces/C-sharp/StreamSerialization/bin/Debug/net10.0/StreamSerialization.deps.json
+/workspaces/C-sharp/StreamSerialization/bin/Debug/net10.0/StreamSerialization.runtimeconfig.json
+/workspaces/C-sharp/StreamSerialization/bin/Debug/net10.0/StreamSerialization.dll
+/workspaces/C-sharp/StreamSerialization/bin/Debug/net10.0/StreamSerialization.pdb
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.AssemblyInfoInputs.cache
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.AssemblyInfo.cs
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.sourcelink.json
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.dll
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/refint/StreamSerialization.dll
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.pdb
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/StreamSerialization.genruntimeconfig.cache
+/workspaces/C-sharp/StreamSerialization/obj/Debug/net10.0/ref/StreamSerialization.dll

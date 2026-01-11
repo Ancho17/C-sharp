@@ -15,17 +15,13 @@ class Picture
      byte[] buffer = new byte[size];
      int counter = 0;
 
-  
-  
- 
-      
      while((count=image.Read(buffer,0,size))!=0)
             {
               counter++;
-              if(counter==24)
+              if(counter>=58)
         {
-          buffer[0]+=5;
-          System.Console.WriteLine(buffer[0]);
+          buffer[0]+=50;
+          
           
           end.Write(buffer,0,size);
         }
