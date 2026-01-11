@@ -24,6 +24,15 @@ class Ask
         }
         string finish = JsonSerializer.Serialize(all);
         File.WriteAllText(path,finish);
+
+        All reveal = JsonSerializer.Deserialize<All>(File.ReadAllText(path));
+        System.Console.WriteLine("Your answers are: ");
+        for(int i=0;i<reveal.AllAnswers.Length;i++)
+            {
+            System.Console.WriteLine($"To question {i+1} your answer is {reveal.AllAnswers[i]}");
+            }
+        
+
        
 
       
