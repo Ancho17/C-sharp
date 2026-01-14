@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Library/bin/Debug/net10.0/Library
+/workspaces/C-sharp/Library/bin/Debug/net10.0/Library.deps.json
+/workspaces/C-sharp/Library/bin/Debug/net10.0/Library.runtimeconfig.json
+/workspaces/C-sharp/Library/bin/Debug/net10.0/Library.dll
+/workspaces/C-sharp/Library/bin/Debug/net10.0/Library.pdb
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.AssemblyInfo.cs
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.sourcelink.json
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.dll
+/workspaces/C-sharp/Library/obj/Debug/net10.0/refint/Library.dll
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.pdb
+/workspaces/C-sharp/Library/obj/Debug/net10.0/Library.genruntimeconfig.cache
+/workspaces/C-sharp/Library/obj/Debug/net10.0/ref/Library.dll

@@ -1,23 +1,28 @@
 ﻿using System.Xml;
+using System.Xml.Serialization;
 namespace XMLer
 {
-class XMiLier
+public class XMiLier
     {
     static void Main()
         {
-       var reader = XmlReader.Create("products.xml");
-        reader.ReadToFollowing("product");
-       do{
-       reader.MoveToFirstAttribute();
-       System.Console.WriteLine(reader.Value);
-       reader.ReadToFollowing("name");
-       System.Console.WriteLine(reader.ReadElementContentAsString());
-       reader.ReadToNextSibling("price");
-       System.Console.WriteLine(reader.ReadElementContentAsString());
-       } while( reader.ReadToFollowing("product"));
+        Person? Angel = new(){Name="Angel",Age=22};
+        
+        var serialize = new XmlSerializer(typeof(Person));
 
-
-
+            using TextWriter finish = new StreamWriter("Thing.xml");
+            serialize.Serialize(finish,Angel);
+            
         }
+    public class Person
+        {
+        public string? Name{get;set;}
+        public int Age{get;set;}
+        }
+
+
+
+
     }
+
 }
