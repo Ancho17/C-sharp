@@ -19,7 +19,7 @@ class MyShop
          
         }
     }
-    public class Flower
+    public class Flower//HY HY
     {
     public  required string Name {get;init;}
     public required double Price {get;set;}
