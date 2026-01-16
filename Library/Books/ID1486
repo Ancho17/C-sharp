@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1486">
+  <BookName>The Great Gatsby</BookName>
+  <AuthorName>	F. Scott Fitzgerald</AuthorName>
+  <Pulished>1925-04-10</Pulished>
+</Book>

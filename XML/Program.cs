@@ -9,9 +9,10 @@ public class XMiLier
         Person? Angel = new(){Name="Angel",Age=22};
         
         var serialize = new XmlSerializer(typeof(Person));
+        string path = "/workspaces/C-sharp/XML/Thing.xml";
 
-            using TextWriter finish = new StreamWriter("Thing.xml");
-            serialize.Serialize(finish,Angel);
+            using FileStream stream = new(path,FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.ReadWrite);
+            serialize.Serialize(stream,Angel);
             
         }
     public class Person
