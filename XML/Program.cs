@@ -13,6 +13,11 @@ public class XMiLier
 
             using FileStream stream = new(path,FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.ReadWrite);
             serialize.Serialize(stream,Angel);
+        using FileStream reader = new(path,FileMode.Open,FileAccess.Read,FileShare.Read);
+        Person? info;
+        info = (Person) serialize.Deserialize(reader);
+        System.Console.WriteLine("Name is " +info.Name);
+        System.Console.WriteLine("Age is " +info.Age);
             
         }
     public class Person
