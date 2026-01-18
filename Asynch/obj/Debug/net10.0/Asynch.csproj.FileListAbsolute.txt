@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Asynch/bin/Debug/net10.0/Asynch
+/workspaces/C-sharp/Asynch/bin/Debug/net10.0/Asynch.deps.json
+/workspaces/C-sharp/Asynch/bin/Debug/net10.0/Asynch.runtimeconfig.json
+/workspaces/C-sharp/Asynch/bin/Debug/net10.0/Asynch.dll
+/workspaces/C-sharp/Asynch/bin/Debug/net10.0/Asynch.pdb
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.AssemblyInfo.cs
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.sourcelink.json
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.dll
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/refint/Asynch.dll
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.pdb
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/Asynch.genruntimeconfig.cache
+/workspaces/C-sharp/Asynch/obj/Debug/net10.0/ref/Asynch.dll
