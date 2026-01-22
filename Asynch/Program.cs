@@ -10,24 +10,32 @@ class Synchronizing
     {
 static async Task Main(string[] args)
 {
-using HttpClient client = new();
-string path = "https://www.hearstnetworks.com/";
-string info = await CallMyRM(path,client);
-System.Console.WriteLine(info);
+List<Task> mylist = [];
+ mylist.Add(Doing());
+ mylist.Add(Did());
+ mylist.Add(Does());
+
+ var finale = Task.WhenAny(mylist);
+ System.Console.WriteLine(finale);
 
 
 }
-public static async Task<string> CallMyRM(string path,HttpClient client)
-{
-HttpResponseMessage message = await client.GetAsync(path);
-string data ="";
-if(message.IsSuccessStatusCode)
-            {
-                data = await message.Content.ReadAsStringAsync();
-            
-            }
-return data;
-}
+static async Task<string> Doing()
+        {
+        string info = await File.ReadAllTextAsync("/workspaces/C-sharp/Asynch/numbers.txt");
+       return info;
+        }
+         static async Task<string>  Did()
+         {
+         string info = await File.ReadAllTextAsync("/workspaces/C-sharp/Asynch/numbers.txt");
+         return info;
+        }
+         static async Task<string>  Does()
+        {
+         string info = await File.ReadAllTextAsync("/workspaces/C-sharp/Asynch/numbers.txt");
+         return info;
+      }
+
 
     }
     }
