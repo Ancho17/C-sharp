@@ -11,29 +11,38 @@ class Synchronizing
 static async Task Main(string[] args)
 {
 List<Task> mylist = [];
- mylist.Add(Doing());
- mylist.Add(Did());
- mylist.Add(Does());
+ mylist.Add( Doing());
+ mylist.Add( Did());
+ mylist.Add( Does());
+ 
+await Task.WhenAll(mylist);
 
- var finale = Task.WhenAny(mylist);
- System.Console.WriteLine(finale);
+ System.Console.WriteLine("Finish");
+ 
+ 
+ 
 
 
 }
-static async Task<string> Doing()
+static async Task Doing()
         {
         string info = await File.ReadAllTextAsync("/workspaces/C-sharp/Asynch/numbers.txt");
-       return info;
+        info +=",1";
+        System.Console.WriteLine(info);
+        
         }
-         static async Task<string>  Did()
+         static async Task  Did()
          {
          string info = await File.ReadAllTextAsync("/workspaces/C-sharp/Asynch/numbers.txt");
-         return info;
+         await Task.Delay(1000);
+          info +=",2";
+         System.Console.WriteLine(info);
         }
-         static async Task<string>  Does()
+         static async Task Does()
         {
          string info = await File.ReadAllTextAsync("/workspaces/C-sharp/Asynch/numbers.txt");
-         return info;
+          info +=",3";
+         System.Console.WriteLine(info);
       }
 
 
