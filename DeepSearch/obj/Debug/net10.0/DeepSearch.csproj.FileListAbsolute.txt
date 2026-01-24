@@ -1,0 +1,15 @@
+/workspaces/C-sharp/DeepSearch/bin/Debug/net10.0/DeepSearch
+/workspaces/C-sharp/DeepSearch/bin/Debug/net10.0/DeepSearch.deps.json
+/workspaces/C-sharp/DeepSearch/bin/Debug/net10.0/DeepSearch.runtimeconfig.json
+/workspaces/C-sharp/DeepSearch/bin/Debug/net10.0/DeepSearch.dll
+/workspaces/C-sharp/DeepSearch/bin/Debug/net10.0/DeepSearch.pdb
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.AssemblyInfoInputs.cache
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.AssemblyInfo.cs
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.sourcelink.json
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.dll
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/refint/DeepSearch.dll
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.pdb
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/DeepSearch.genruntimeconfig.cache
+/workspaces/C-sharp/DeepSearch/obj/Debug/net10.0/ref/DeepSearch.dll
