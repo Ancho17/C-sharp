@@ -1,0 +1,15 @@
+/workspaces/C-sharp/Events/bin/Debug/net10.0/Events
+/workspaces/C-sharp/Events/bin/Debug/net10.0/Events.deps.json
+/workspaces/C-sharp/Events/bin/Debug/net10.0/Events.runtimeconfig.json
+/workspaces/C-sharp/Events/bin/Debug/net10.0/Events.dll
+/workspaces/C-sharp/Events/bin/Debug/net10.0/Events.pdb
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.AssemblyInfoInputs.cache
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.AssemblyInfo.cs
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.csproj.CoreCompileInputs.cache
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.sourcelink.json
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.dll
+/workspaces/C-sharp/Events/obj/Debug/net10.0/refint/Events.dll
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.pdb
+/workspaces/C-sharp/Events/obj/Debug/net10.0/Events.genruntimeconfig.cache
+/workspaces/C-sharp/Events/obj/Debug/net10.0/ref/Events.dll
