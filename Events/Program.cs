@@ -4,38 +4,73 @@ namespace EventOrganaizer
 {
 class Eventer
     {
-  
+ public static EventHandler? See;
     static void Main()
         {
-     Pet Tobby = new();
-     Wellcomer Tom = new();
-     Tom.Notify += Tobby.GetHome;
-     System.Console.Write("Name of pet ");
-     string? name = System.Console.ReadLine();
-     Tom.Wellcome(name);
 
-     
+    Store store = new(){Name_Product="RAM",Price = 30};
+    Production production = new(){Amount = 0};
+    store.Warning += Call;
+    store.Price =350;
+    store.Warning -= Call;
+    store.Price =450;
+    See +=NoAmount;
+    See += (o,e)=>{System.Console.WriteLine("You don't have anymore");};
+    production.OnNomore(production.Amount);
+    
+    
     
         }
-    public class Pet
+
+   public class Store
         {
-        public void GetHome(string ur_pet)
+         private event Action<string>? warning;
+         public event Action<string>? Warning
+         {add{warning +=value;} remove{warning -=value;}}
+        
+        public string? Name_Product {get;set;}
+        private int price;
+        public int Price{get{return price; }
+                set
+                {
+                 if(price>20)
+                    {
+                    price = value;
+                   warning?.Invoke(Name_Product);
+                    
+                    } 
+                    else
+                    {
+                    price = value;
+                    }  
+                }
+            }
+        
+
+        
+        }
+    static void Call(string product)
+        {
+        System.Console.WriteLine($"{product} is too expensive.");
+        }
+    public class Production
+        {
+        public int Amount{get;set;}
+        public virtual void OnNomore(int amount)
             {
-            System.Console.WriteLine($"{ur_pet} is home");
+            if(amount==0)
+            See?.Invoke(this,EventArgs.Empty);
             }
         }
-    public class Wellcomer
+    public static void NoAmount(object? o,EventArgs e)
         {
-        public event Action<string>? Notify;
-        public void Wellcome(string pet)
-            {
-            if(pet!=""){
-            Notify?.Invoke(pet);
-            System.Console.WriteLine($"Welcome Home {pet}");
-            }
-            }
+        System.Console.WriteLine("No more");
         }
+     
+   
+  
 
  
     }
+    
 }
