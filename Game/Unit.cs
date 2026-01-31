@@ -2,16 +2,17 @@
 abstract class Entity
 {
 public string? Name {get;set;}
-public double Health{get;set;}
-public Entity(double health)
+public int Health{get;set;}
+public int Stats{get;set;}
+public Entity(int health)
 {
 Health = health;
 }
 
-public virtual double QAbility(double EnemyHealth){return 0;}
-public virtual double WAbility(double EnemyHealth){return 0;}
-public virtual double EAbility(double EnemyHealth){return 0;}
-public virtual double RAbility(double EnemyHealth){return 0;}
+public virtual int QAbility(int _Health,int stats){return 0;}
+public virtual int WAbility(int _Health,int stats){return 0;}
+public virtual int EAbility(int _Health,int stats){return 0;}
+public virtual int RAbility(int _Health,int stats){return 0;}
 
 
 
