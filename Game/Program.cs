@@ -9,39 +9,48 @@ class TheGame
     static void Main()
         {
             int st=0;
-            Hero hero = new(100+st*10)
+            Hero hero = new(100+st*10,"None")
             {
                 Name = "Hero",
-                Stats = st
+                Stats = st,
+                StatusEf="None",
+                Timer = 0
             };
          Announce+=Call; 
          int dmg;
+         int repdmgH=0;
+         int repdmgE=0;
  
          var Eattack = new Random();  
         while(hero.Health>0)
             {
-                Enemy enemy = new("Deamon",100+st*hero.Health/10,st);
+                Enemy enemy = new("Deamon",100+st*hero.Health/10,st,"None",0);
                 System.Console.WriteLine($"{enemy.Name} attacks ");
                 while (enemy.Health > 0)
                 {
+                if(hero.StatusEf!="None")
+                    {
+                    hero.StatusEf = Effects(hero.StatusEf,ref hero.Timer,ref repdmgH);
+                    }
+                if(hero.Timer!=0){hero.Health -= repdmgH;hero.Timer--;}
                 System.Console.Write("Chose atack between q and r ");
                 string? attack = Console.ReadLine();
                 attack = attack?.ToUpper();
                  switch (attack)
                 {
-                  case "Q": dmg=hero.QAbility(enemy.Health,hero.Stats); enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  case "W": dmg=hero.WAbility(enemy.Health,hero.Stats); enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  case "E": int ur_Health=hero.EAbility(hero.Health,hero.Stats);Console.WriteLine($"You healed for {ur_Health - hero.Health} your health is {ur_Health}\n"); hero.Health = ur_Health;  break;
-                  case "R": dmg=hero.RAbility(enemy.Health,hero.Stats); enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  default: dmg = 10; enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "Q": dmg=hero.QAbility(enemy.Health,hero.Stats,hero.StatusEf); enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "W": dmg=hero.WAbility(enemy.Health,hero.Stats,ref hero.StatusEf);enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "E": int ur_Health=hero.EAbility(hero.Health,hero.Stats,hero.StatusEf);Console.WriteLine($"You healed for {ur_Health - hero.Health} your health is {ur_Health}\n"); hero.Health = ur_Health;  break;
+                  case "R": dmg=hero.RAbility(enemy.Health,hero.Stats,hero.StatusEf); enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  default: dmg = 10; enemy.Health=DMG(enemy.Name,enemy.Health,dmg,hero.StatusEf); break;
                     
                 }
                 switch (Eattack.Next(0,4))
                     {
-                    case 1:dmg=enemy.QAbility(hero.Health,enemy.Stats); hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 2:dmg=enemy.WAbility(hero.Health,enemy.Stats); hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 3:dmg=enemy.EAbility(hero.Health,enemy.Stats); hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 4:dmg=enemy.RAbility(hero.Health,enemy.Stats); hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 1:dmg=enemy.QAbility(hero.Health,enemy.Stats,hero.StatusEf);hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 2:dmg=enemy.WAbility(hero.Health,enemy.Stats,ref hero.StatusEf);hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 3:dmg=enemy.EAbility(hero.Health,enemy.Stats,hero.StatusEf); hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 4:dmg=enemy.RAbility(hero.Health,enemy.Stats,hero.StatusEf);hero.Health=DMG(hero.Name,hero.Health,dmg); break;
                     case 0:dmg= 10; hero.Health=DMG(hero.Name,hero.Health,dmg); break;
                     }
                 if(hero.Health<=0) break;
@@ -73,26 +82,27 @@ class TheGame
         }
   class Hero : Entity
     {
-    public Hero(int health ): base(health)
+    public Hero(int health,string status ): base(health,status)
         {
         Health = health; 
+        StatusEf=status;
         }
-    public override int QAbility(int EnemyHealth,int stats)
+    public override int QAbility(int EnemyHealth,int stats,string StatusEf)
         {
         var attack = new Random();
         int att = attack.Next(0+ stats,90+ stats) ;
 
         return att;
         }
-        public override int WAbility(int EnemyHealth,int stats)
+        public override int WAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
         return 20 + stats;
         }   
-        public override int EAbility(int YourHealth,int stats)
+        public override int EAbility(int YourHealth,int stats,string StatusEf)
         {
         return  YourHealth+10+stats;
         }   
-        public override int RAbility(int EnemyHealth,int stats)
+        public override int RAbility(int EnemyHealth,int stats,string StatusEf)
         {
         int num = EnemyHealth/10;
         int dmg=0;
@@ -106,27 +116,30 @@ class TheGame
       class Enemy : Entity
     {
     
-    public Enemy(string name,int health,int stats ): base(health)
+    public Enemy(string name,int health,int stats,string status,uint timer): base(health,status)
         {
         Name = name;
         Health = health; 
         Stats = stats;
+        StatusEf=status;
+        Timer = timer;
         }
-    public override int QAbility(int EnemyHealth,int stats)
+    public override int QAbility(int EnemyHealth,int stats,string StatusEf)
         {
-        int dmg =10;
-        dmg +=EnemyHealth/50-20;
-        return 30;
+        int dmg =10+stats;
+        dmg +=EnemyHealth/5;
+        return dmg;
         }
-        public override int WAbility(int EnemyHealth,int stats)
+        public override int WAbility(int EnemyHealth,int stats,ref string StatusEf)
+        {
+        StatusEf = "ignite";
+        return 10;
+        }   
+        public override int EAbility(int EnemyHealth,int stats,string StatusEf)
         {
         return 10;
         }   
-        public override int EAbility(int EnemyHealth,int stats)
-        {
-        return 10;
-        }   
-        public override int RAbility(int EnemyHealth,int stats)
+        public override int RAbility(int EnemyHealth,int stats,string StatusEf)
         {
         return 10;
         }      
