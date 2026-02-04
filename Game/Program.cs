@@ -1,10 +1,12 @@
-﻿namespace MyGame
+﻿using Elements;
+namespace MyGame
 {
 
 class TheGame
     {
   
    public static Action<string?,int,int>? Announce;
+   public static Action<string?,string?,int,uint,int> Eff_Announce;
    
     static void Main()
         {
@@ -17,6 +19,7 @@ class TheGame
                 Timer = 0
             };
          Announce+=Call; 
+         Eff_Announce+=CallEff;
          int dmg;
          int repdmgH=0;
          int repdmgE=0;
@@ -28,29 +31,63 @@ class TheGame
                 System.Console.WriteLine($"{enemy.Name} attacks ");
                 while (enemy.Health > 0)
                 {
-                if(hero.StatusEf!="None")
+                if(hero.Timer!=0)
                     {
-                    hero.StatusEf = Effects(hero.StatusEf,ref hero.Timer,ref repdmgH);
+                    hero.Timer--;
+                    if(repdmgH!=-1){
+                    hero.Health-=repdmgH;
+                    Eff_Announce.Invoke(hero.Name,hero.StatusEf,hero.Health,hero.Timer,repdmgH);
                     }
-                if(hero.Timer!=0){hero.Health -= repdmgH;hero.Timer--;}
+                else{
+                    Eff_Announce.Invoke(hero.Name,hero.StatusEf,hero.Health,hero.Timer,0);
+                }
+                    if(hero.Timer==0)
+                        {
+                         hero.StatusEf =  "None"; 
+                         repdmgH=0; 
+                        }
+                    }
+                if(hero.StatusEf!="None"&&hero.Timer==0)
+                    {
+                    
+                    uint timer=0;
+                    hero.StatusEf = StsEff.Effects(hero.StatusEf,ref timer, ref repdmgH);
+                    hero.Timer=timer;
+                  
+                     if(repdmgH!=-1){
+                    hero.Health-=repdmgH;
+                    
+                    Eff_Announce.Invoke(hero.Name,hero.StatusEf,hero.Health,hero.Timer,repdmgH);
+                     }
+                        else
+                        {
+                           Eff_Announce.Invoke(hero.Name,hero.StatusEf,hero.Health,hero.Timer,0);  
+                        }
+                    }
+                 
+                if(hero.Health<=0) break;
                 System.Console.Write("Chose atack between q and r ");
                 string? attack = Console.ReadLine();
                 attack = attack?.ToUpper();
+                if(repdmgH==-1){attack = "Stoped";}
+                string hstatus="";
+                string estatus="";
                  switch (attack)
                 {
-                  case "Q": dmg=hero.QAbility(enemy.Health,hero.Stats,hero.StatusEf); enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  case "W": dmg=hero.WAbility(enemy.Health,hero.Stats,ref hero.StatusEf);enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  case "E": int ur_Health=hero.EAbility(hero.Health,hero.Stats,hero.StatusEf);Console.WriteLine($"You healed for {ur_Health - hero.Health} your health is {ur_Health}\n"); hero.Health = ur_Health;  break;
-                  case "R": dmg=hero.RAbility(enemy.Health,hero.Stats,hero.StatusEf); enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  default: dmg = 10; enemy.Health=DMG(enemy.Name,enemy.Health,dmg,hero.StatusEf); break;
+                  case "Q": dmg=hero.QAbility(enemy.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;} enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "W": dmg=hero.WAbility(enemy.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;}enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "E": int ur_Health=hero.EAbility(hero.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;}Console.WriteLine($"You healed for {ur_Health - hero.Health} your health is {ur_Health}\n"); hero.Health = ur_Health;  break;
+                  case "R": dmg=hero.RAbility(enemy.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;} enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "Stoped": System.Console.WriteLine("Can't Move!");break;
+                  default: dmg = 10; enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
                     
                 }
-                switch (Eattack.Next(0,4))
+                switch (Eattack.Next(-1,5))
                     {
-                    case 1:dmg=enemy.QAbility(hero.Health,enemy.Stats,hero.StatusEf);hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 2:dmg=enemy.WAbility(hero.Health,enemy.Stats,ref hero.StatusEf);hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 3:dmg=enemy.EAbility(hero.Health,enemy.Stats,hero.StatusEf); hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 4:dmg=enemy.RAbility(hero.Health,enemy.Stats,hero.StatusEf);hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 1:dmg=enemy.QAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 2:dmg=enemy.WAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 3:dmg=enemy.EAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;} hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 4:dmg=enemy.RAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
                     case 0:dmg= 10; hero.Health=DMG(hero.Name,hero.Health,dmg); break;
                     }
                 if(hero.Health<=0) break;
@@ -80,6 +117,12 @@ class TheGame
         System.Console.WriteLine($"{entity} took {dmg} current health:{health}");
         System.Console.WriteLine("");
         }
+    public static void CallEff(string? entity,string? eff,int health,uint time,int dmg)
+        {
+        System.Console.WriteLine($"{eff} was activated {entity} took {dmg}  ");
+        System.Console.WriteLine($"time left {time} turns");
+        System.Console.WriteLine($"Current health {health}");
+        }
   class Hero : Entity
     {
     public Hero(int health,string status ): base(health,status)
@@ -87,7 +130,7 @@ class TheGame
         Health = health; 
         StatusEf=status;
         }
-    public override int QAbility(int EnemyHealth,int stats,string StatusEf)
+    public override int QAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
         var attack = new Random();
         int att = attack.Next(0+ stats,90+ stats) ;
@@ -98,11 +141,11 @@ class TheGame
         {
         return 20 + stats;
         }   
-        public override int EAbility(int YourHealth,int stats,string StatusEf)
+        public override int EAbility(int YourHealth,int stats, ref string StatusEf)
         {
         return  YourHealth+10+stats;
         }   
-        public override int RAbility(int EnemyHealth,int stats,string StatusEf)
+        public override int RAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
         int num = EnemyHealth/10;
         int dmg=0;
@@ -124,7 +167,7 @@ class TheGame
         StatusEf=status;
         Timer = timer;
         }
-    public override int QAbility(int EnemyHealth,int stats,string StatusEf)
+    public override int QAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
         int dmg =10+stats;
         dmg +=EnemyHealth/5;
@@ -135,11 +178,12 @@ class TheGame
         StatusEf = "ignite";
         return 10;
         }   
-        public override int EAbility(int EnemyHealth,int stats,string StatusEf)
+        public override int EAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
+        StatusEf = "freeze";
         return 10;
         }   
-        public override int RAbility(int EnemyHealth,int stats,string StatusEf)
+        public override int RAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
         return 10;
         }      

@@ -12,10 +12,10 @@ Health = health;
 StatusEf = status;
 }
 
-public virtual int QAbility(int _Health,int stats,string StatusEf){return 0;}
+public virtual int QAbility(int _Health,int stats,ref string StatusEf){return 0;}
 public virtual int WAbility(int _Health,int stats,ref string StatusEf){return 0;}
-public virtual int EAbility(int _Health,int stats,string StatusEf){return 0;}
-public virtual int RAbility(int _Health,int stats,string StatusEf){return 0;}
+public virtual int EAbility(int _Health,int stats, ref string StatusEf){return 0;}
+public virtual int RAbility(int _Health,int stats, ref string StatusEf){return 0;}
 
 
 
