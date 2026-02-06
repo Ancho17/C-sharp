@@ -47,6 +47,24 @@ class TheGame
                          repdmgH=0; 
                         }
                     }
+                //enemy//
+                   if(enemy.Timer!=0)
+                    {
+                    enemy.Timer--;
+                    if(repdmgE!=-1){
+                    enemy.Health-=repdmgE;
+                    Eff_Announce.Invoke(enemy.Name,enemy.StatusEf,enemy.Health,enemy.Timer,repdmgE);
+                    }
+                else{
+                    Eff_Announce.Invoke(enemy.Name,enemy.StatusEf,enemy.Health,enemy.Timer,0);
+                }
+                    if(enemy.Timer==0)
+                        {
+                         enemy.StatusEf =  "None"; 
+                         repdmgE=0; 
+                        }
+                    } 
+                    //enemy//
                 if(hero.StatusEf!="None"&&hero.Timer==0)
                     {
                     
@@ -64,8 +82,28 @@ class TheGame
                            Eff_Announce.Invoke(hero.Name,hero.StatusEf,hero.Health,hero.Timer,0);  
                         }
                     }
+                //enemy//
+                if(enemy.StatusEf!="None"&&enemy.Timer==0&&enemy.StatusEf!="Transform")
+                    {
+                    
+                    uint timer=0;
+                    enemy.StatusEf = StsEff.Effects(enemy.StatusEf,ref timer, ref repdmgE);
+                    enemy.Timer=timer;
+                  
+                     if(repdmgE!=-1){
+                    enemy.Health-=repdmgE;
+                    
+                    Eff_Announce.Invoke(enemy.Name,enemy.StatusEf,enemy.Health,enemy.Timer,repdmgE);
+                     }
+                        else
+                        {
+                           Eff_Announce.Invoke(enemy.Name,enemy.StatusEf,enemy.Health,enemy.Timer,0);  
+                        }
+                    }
+                 //enemy//
                  
                 if(hero.Health<=0) break;
+                System.Console.WriteLine("-------------------------");
                 System.Console.Write("Chose atack between q and r ");
                 string? attack = Console.ReadLine();
                 attack = attack?.ToUpper();
@@ -74,21 +112,31 @@ class TheGame
                 string estatus="";
                  switch (attack)
                 {
-                  case "Q": dmg=hero.QAbility(enemy.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;} enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  case "W": dmg=hero.WAbility(enemy.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;}enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
-                  case "E": int ur_Health=hero.EAbility(hero.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;}Console.WriteLine($"You healed for {ur_Health - hero.Health} your health is {ur_Health}\n"); hero.Health = ur_Health;  break;
-                  case "R": dmg=hero.RAbility(enemy.Health,hero.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;} enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "Q": dmg=hero.QAbility(enemy.Health,hero.Stats,ref estatus);if(estatus!=""){enemy.StatusEf = estatus;} enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "W": dmg=hero.WAbility(enemy.Health,hero.Stats,ref estatus);if(estatus!=""){enemy.StatusEf = estatus;}enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
+                  case "E": int ur_Health=hero.EAbility(hero.Health,hero.Stats,ref estatus);if(estatus!=""){enemy.StatusEf = estatus;}Console.WriteLine($"You healed for {ur_Health - hero.Health} your health is {ur_Health}\n"); hero.Health = ur_Health;  break;
+                  case "R": dmg=hero.RAbility(enemy.Health,hero.Stats,ref estatus);if(estatus!=""){enemy.StatusEf = estatus;} enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
                   case "Stoped": System.Console.WriteLine("Can't Move!");break;
                   default: dmg = 10; enemy.Health=DMG(enemy.Name,enemy.Health,dmg); break;
                     
                 }
+                if(enemy.StatusEf != "Transform"){
+                if(enemy.StatusEf != "freeze" ){
                 switch (Eattack.Next(-1,5))
                     {
-                    case 1:dmg=enemy.QAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 2:dmg=enemy.WAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 3:dmg=enemy.EAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;} hero.Health=DMG(hero.Name,hero.Health,dmg); break;
-                    case 4:dmg=enemy.RAbility(hero.Health,enemy.Stats,ref estatus);if(estatus!=""){hero.StatusEf = estatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 1:dmg=enemy.QAbility(hero.Health,enemy.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 2:dmg=enemy.WAbility(hero.Health,enemy.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;}hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 3:dmg=enemy.EAbility(hero.Health,enemy.Stats,ref hstatus);if(hstatus!=""){hero.StatusEf = hstatus;} hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    case 4:dmg=enemy.RAbility(hero.Health,enemy.Stats,ref estatus);Console.WriteLine("TRANSFORMATION"); if(estatus!=""){enemy.Timer=2;enemy.StatusEf = estatus;repdmgE=5;} enemy.Health+=20;hero.Health=DMG(hero.Name,hero.Health,dmg); break;
                     case 0:dmg= 10; hero.Health=DMG(hero.Name,hero.Health,dmg); break;
+                    }
+                }
+                }
+                    else
+                    {
+                     dmg = 50 +st;
+                     hero.Health-=DMG(hero.Name,hero.Health,dmg); 
+                    
                     }
                 if(hero.Health<=0) break;
                 }
@@ -139,6 +187,10 @@ class TheGame
         }
         public override int WAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
+        if(stats>=10)
+                {
+                StatusEf="freeze";
+                }
         return 20 + stats;
         }   
         public override int EAbility(int YourHealth,int stats, ref string StatusEf)
@@ -185,6 +237,7 @@ class TheGame
         }   
         public override int RAbility(int EnemyHealth,int stats,ref string StatusEf)
         {
+             StatusEf="Transform";
         return 10;
         }      
     }
