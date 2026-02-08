@@ -1,4 +1,5 @@
-﻿using Elements;
+﻿using System.Text.Json;
+using Elements;
 namespace MyGame
 {
 
@@ -11,6 +12,7 @@ class TheGame
     static void Main()
         {
             int st=0;
+            int killcount=0;
             Hero hero = new(100+st*10,"None")
             {
                 Name = "Hero",
@@ -140,6 +142,10 @@ class TheGame
                     }
                 if(hero.Health<=0) break;
                 }
+                if(hero.Health>0&&enemy.Health<=0)
+                {
+                killcount++;
+                }
                 hero.Stats+=10;
                 st+=10;
                 if (enemy.Health <= 0)
@@ -147,13 +153,28 @@ class TheGame
                   System.Console.WriteLine($"{enemy.Name} was defeated ");  
                 }
             }
-            
+           RecFile recording = new(hero.Name,hero.Stats,killcount);
+           int filenum=1;
+           string path = "/workspaces/C-sharp/Game/GameRecords/";
+           
+            while (File.Exists(path + filenum.ToString()+".json"))
+            {
+             filenum++;   
+            }
+            path += filenum.ToString()+".json";
+            var myFile = File.Create(path);
+            var options = new JsonSerializerOptions { WriteIndented = true };
+           var json = JsonSerializer.Serialize(recording,options);
+            myFile.Close();
+            File.WriteAllText(path,json); 
+          
+           
         
 
     
         }
     
-   
+   public record RecFile( string Name,int Stats,int Enemy_def);
   public static int DMG(string? name,int health,int dmg)
         {
         
